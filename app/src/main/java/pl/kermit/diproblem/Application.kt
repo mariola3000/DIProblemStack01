@@ -20,7 +20,6 @@ class Application : android.app.Application(), HasActivityInjector/*, HasService
         return dispatchingAndroidActivityInjector
     }
 
-
     override fun onCreate() {
         super.onCreate()
         DaggerAppComponent.builder()
@@ -28,6 +27,5 @@ class Application : android.app.Application(), HasActivityInjector/*, HasService
             .build().inject(this)
 
     }
-
 
 }
